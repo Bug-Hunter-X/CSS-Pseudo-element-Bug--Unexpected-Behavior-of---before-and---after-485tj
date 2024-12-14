@@ -1,0 +1,19 @@
+The following CSS code snippet demonstrates an uncommon error where a pseudo-element selector is used incorrectly, causing unexpected behavior:
+
+```css
+.container::before {
+  content: "This is a test";
+  display: block;
+}
+
+.container::after {
+  content: "This is another test";
+  display: block;
+}
+```
+
+This code is intended to add two pseudo-elements before and after the content of `.container`. However, this approach can lead to issues:
+
+* **Unexpected stacking order:** When both `::before` and `::after` are used, the positioning and z-index of the elements might behave differently than expected.
+* **Specificity problems:** Overlapping selectors can introduce unwanted styling conflicts, making it challenging to maintain predictable results.
+* **Poor maintainability:** It makes the CSS code more difficult to understand and modify in the long run.
