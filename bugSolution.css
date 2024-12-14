@@ -1,0 +1,20 @@
+To avoid the issues mentioned above, consider using a more structured approach such as creating actual child elements or utilizing flexbox or grid layout for better control over positioning and stacking.  For instance, using separate elements will improve readability and maintainability:
+
+```css
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .before {
+  content: "This is a test";
+  display: block;
+}
+
+.container .after {
+  content: "This is another test";
+  display: block;
+}
+```
+
+This approach provides greater control over styling and positioning.  Furthermore, if needed, absolute positioning can be applied to the elements to finely tune their location relative to the parent container.  Always ensure your styles are well-organized and avoid overlapping or overly specific selectors.
